@@ -13,13 +13,14 @@ export const actions: Actions = {
         if (err) {
             if (err instanceof AuthApiError && err.status === 400) {
                 return fail(400, {
-                    error: 'Invalid email or password',
+                    error: 'Invalid email or password', 
+                    
                 })
             }
             return fail(500, {
                 error: 'Server error. Please try again later'
             })
         } 
-       throw redirect(303,'/') 
+       throw redirect(303,'/homepage') 
     }
 }
