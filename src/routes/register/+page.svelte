@@ -1,9 +1,11 @@
 <script lang="ts">
+	import type {PageData} from "./$types"; 
+	
 </script>
 
 <main>
 	<h1>Register</h1>
-	<form action="" class="auth-form">
+	<form action="?/register" method="POST" class="auth-form">
 		<label for=""> Email </label>
 		<input type="text" name="email" />
 		<label for=""> Password </label>
