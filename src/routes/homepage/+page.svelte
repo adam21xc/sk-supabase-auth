@@ -18,7 +18,7 @@
 <main>
 
 	{#if data.session}  
-    <h2>Subpage access granted : )</h2> 
+    <h2>Homepage</h2> 
 	<p>Welcome, {data.session.user.email}</p>
 		<form action="/logout" method="POST" use:enhance={submitLogout} >
 			<button type="submit" class="btn btn-primary">Logout</button> 
