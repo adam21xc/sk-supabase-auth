@@ -12,5 +12,13 @@
 	</form>  
 	<!-- create an a tag to reset password --> 
 	
-	<a href="/password_reset" class="btn btn-primary"><h3> Forgot Password?</h3></a>
-</main>
+	<a href="/password_reset" class="reset-password"><h3> Forgot Password?</h3></a> 
+	<h4> Don't have an account <a href="/register" class="reset-password"> Sign up</a></h4>
+</main> 
+
+<style>
+.reset-password {
+	text-align: center;
+}
+
+</style>
