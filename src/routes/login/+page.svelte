@@ -12,7 +12,7 @@
 	</form>  
 	<!-- create an a tag to reset password --> 
 	
-	<a href="/password_reset" class="reset-password"><h3> Forgot Password?</h3></a> 
+	<a href="/email_verification" class="reset-password"><h3> Forgot Password?</h3></a> 
 	<h4> Don't have an account <a href="/register" class="reset-password"> Sign up</a></h4>
 </main> 
 
