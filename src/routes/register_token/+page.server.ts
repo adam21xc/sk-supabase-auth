@@ -22,9 +22,10 @@ export const actions: Actions = {
         //     })
         // }
 
-        const { data, error: err } = await locals.sb.auth.signUp({
+        const { data, error: err } = await locals.sb.auth.verifyOtp({
             email: body.email as string,
-            password: body.password as string
+            token,
+            type: 'signup'
         })
         if (err) {
             if (err instanceof AuthApiError && err.status === 400) {
@@ -36,7 +37,7 @@ export const actions: Actions = {
                 error: 'Server error. Please try again later'
             })
         } 
-        throw redirect(303,'/confirmation')
+        throw redirect(303,'/')
     } 
     
 };
