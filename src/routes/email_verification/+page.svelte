@@ -31,7 +31,7 @@ export let form
 		<input type="email" name="email" value={form?.email ?? ''} placeholder="Enter Email..." />
 		<button type="submit" class="btn btn-primary">Continue</button>
 	</form>  
-	
+	<h3>After submission check your email for verification link</h3>
 	
 	<!-- <h3>Type in Email</h3>
 	<input type="email" name="email" bind:value={email} />

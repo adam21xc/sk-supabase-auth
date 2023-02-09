@@ -1,4 +1,4 @@
-<script lang="ts"> 
+<!-- <script lang="ts"> 
     export let data:PageData 
     import {enhance, type SubmitFunction} from '$app/forms'  
     // import {enhance, type SubmitFunction} from '$app/forms' 
@@ -32,4 +32,4 @@
 		<a href="/register" class="btn btn-secondary">Register</a>
 	</div> 
 	{/if}
-</main>
+</main> -->

@@ -3,26 +3,22 @@
 export let form  
 export let data 
 
-import { enhance, applyAction } from '$app/forms';
+console.log(form,'form from +page.svelte') 
+console.log(data,'data from +page.svelte')
+import { enhance, applyAction } from '$app/forms'; 
+
+if(form?.email){
+	console.log('email is present')
+} 
+else{
+	console.log('email is not present')
+} 
+
 </script>
 
 <main>
 	<h1>Login</h1>
-	<form action="?/login" method="POST" class="auth-form" 
-	use:enhance={({ form }) => {
-			// Before form submission to server
-			return async ({ result, update }) => {
-				// After form submission to server
-				if (result.type === 'success') {
-					form.reset();
-				}
-				if (result.type === 'invalid') {
-					await applyAction(result);
-				}
-				update();
-			};
-		}}
-	>
+	<form action="?/login" method="POST" class="auth-form">
 		<label for=""> Email </label>
 		<input type="text" name="email" value={form?.email ?? ''} />
 		<label for=""> Password </label>
@@ -32,7 +28,12 @@ import { enhance, applyAction } from '$app/forms';
 	<!-- create an a tag to reset password --> 
 	
 	<a href="/email_verification" class="reset-password"><h3> Forgot Password?</h3></a> 
-	<h4> Don't have an account <a href="/register" class="reset-password"> Sign up</a></h4>
+	<h4> Don't have an account <a href="/register" class="reset-password"> Sign up</a></h4> 
+	
+	{#if form?.error} 
+		<div class="error"> {form.error} </div> 
+	{/if} 
+	
 </main> 
 
 <style>

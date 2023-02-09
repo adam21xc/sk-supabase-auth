@@ -19,6 +19,12 @@ export const actions: Actions = {
             password: body.password as string
         }) 
 
+         if (body.password.length < 6) {
+      return fail(400, {
+        error: "Password must contain at least 6 characters"
+      });
+    }
+
         if (err) {
             if (err instanceof AuthApiError && err.status === 400) {
                 return fail(400, {
@@ -30,7 +36,9 @@ export const actions: Actions = {
             return fail(500, {
                 error: 'Server error. Please try again later'
             })
-        } 
-       throw redirect(303,'/homepage') 
-    }
+        }  
+        throw redirect(303, '/homepage') 
+        
+    } 
+    
 }
