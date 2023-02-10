@@ -30,8 +30,8 @@ else{
 	<a href="/email_verification" class="reset-password"><h3> Forgot Password?</h3></a> 
 	<h4> Don't have an account <a href="/register" class="reset-password"> Sign up</a></h4> 
 	
-	{#if form?.error} 
-		<div class="error"> {form.error} </div> 
+	{#if form?.message} 
+		<div class="error"> {form.message} </div> 
 	{/if} 
 	
 </main> 
@@ -39,6 +39,10 @@ else{
 <style>
 .reset-password {
 	text-align: center;
+} 
+
+.error{
+	color: red;
 }
 
 </style>

@@ -21,7 +21,8 @@ export const actions: Actions = {
 
          if (body.password.length < 6) {
       return fail(400, {
-        error: "Password must contain at least 6 characters"
+          error: "Password must contain at least 6 characters", 
+          message: "Password 6 characters"
       });
     }
 

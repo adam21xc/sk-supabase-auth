@@ -24,7 +24,15 @@ export const actions: Actions = {
 
         const { data, error: err } = await locals.sb.auth.signUp({
             email: body.email as string,
-            password: body.password as string
+            password: body.password as string, 
+            options: {
+                data: {
+                    first_name: body.first_name as string, 
+                    last_name: body.last_name as string, 
+                    phone_number: body.phone as string, 
+
+                }
+            }
         })
         if (err) {
             if (err instanceof AuthApiError && err.status === 400) {

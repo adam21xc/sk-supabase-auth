@@ -1,7 +1,8 @@
 <script lang="ts">
 	import type {PageData} from "./$types"; 
 	import { enhance, applyAction } from '$app/forms'; 
-	export let form
+	export let form 
+	console.log(form,'form data')
 </script>
 
 <main>

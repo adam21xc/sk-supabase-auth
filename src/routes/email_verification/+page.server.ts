@@ -39,6 +39,6 @@ export const actions: Actions = {
                 error: 'Server error. Please try again later'
             })
         } 
-        // throw redirect(303,'/check_your_email')
+        throw redirect(303,'/confirmation')
     }
 }
